@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
 body{
     margin: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
-
+body * {
+    box-sizing: border-box;
+}
 .mainLogin {
     width: 100vw;
     height: 100vh;
@@ -20,7 +25,9 @@ body{
 }
 
 .leftLogin > h1{ 
+    font-size: 3vw;
     color: #77ffc0 ;
+    
 }
 .rightLogin{
     width: 50vw;
@@ -29,6 +36,10 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.imagemDisco{
+    width: 35vw;
 }
 
 .cardLogin{
@@ -49,6 +60,7 @@ body{
     margin: 0;
 }
 .textfield{
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -90,4 +102,33 @@ body{
     background: #77ffc0;
     cursor: pointer;
     box-shadow: 0px 10px 40px 12px #00ff8052  ;
+}
+
+@media only screen and (max-width: 950px){
+    .cardLogin{
+        width: 85% ;
+    }
+}
+@media only screen and (max-width:600px){
+    .mainLogin{
+        flex-direction: column;
+    }
+    .leftLogin > h1{
+        display: none;
+    }
+
+    .leftLogin{
+        width: 100%;
+        height: auto;
+    }
+    .rightLogin{
+        width: 100%;
+        height: auto;
+    }
+    .leftLogin >img {
+        width: 50vw;
+    }
+    .cardLogin{
+        width: 90%;
+    }
 }
